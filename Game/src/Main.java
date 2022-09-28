@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Main {
     // Det er i denne selve spillet udvikles
 
@@ -21,6 +22,11 @@ public class Main {
         // Så længe at begge spilleres score er under 40, så kører while loppet videre.
         while (player1 < 40 && player2 < 40) {
 
+            System.out.println("player1 press Enter");
+            Scanner input = new Scanner(System.in);
+
+            String test = input.nextLine();
+
             // begge terninger kastes
             die1.roll();
             die2.roll();
@@ -34,8 +40,19 @@ public class Main {
             System.out.println("Player one rolled: " + die1.toString() + " and " + die2.toString());
             player1 = player1 + diceSum;
             System.out.println("Player ones total score is: " + player1);
+            System.out.println();
+
+            // Hvis spilleren slår over 40, så vinder spiller 1
+            if(player1 > 40) {
+                System.out.println("player one won");
+                break;
+            }
 
             // Nu er spiller 1's tur færdig og derfor kastes der et nyt kast
+
+            System.out.println("player2 press Enter");
+            test = input.nextLine();
+
             die1.roll();
             die2.roll();
 
@@ -49,17 +66,17 @@ public class Main {
             System.out.println("Player two rolled: " + die1.toString() + " and " + die2.toString());
             player2 = player2 + diceSum;
             System.out.println("Player two's total score is: " + player2);
+            System.out.println();
 
-            // Hvis spilleren slår over 40, så vinder spiller 1
-            if(player1 > 40){
-                System.out.println("player one won");
-
-            }
             // Hvis spiller 1 ikke får 40 først, så vinder spiller 2, ved at slå 40.
-            else if(player2 > 40){
-                System.out.println("player two won");
+            if(player2 > 40){
+                System.out.println("Player two won");
+                break;
 
             }
         }
+
+        System.out.print("Thank you for playing!");
+
     }
 }
