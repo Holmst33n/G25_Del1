@@ -1,6 +1,6 @@
+import java.util.*;
 public class Main {
     // Det er i denne selve spillet udvikles
-import java.util.*;
 
     public static void main(String[] args) {
 
@@ -26,7 +26,7 @@ import java.util.*;
             die2.roll();
 
             //Dicesummen er valuen af begge kastede terninger
-            diceSum = die1.getFaceValue + die2.getFaceValue;
+            diceSum = die1.getFaceValue() + die2.getFaceValue();
 
             // System udskriver hvad spiller 1 slog med terningerne
             // Efter så kommer den til at gemme terningernes værdi til spillerens score
@@ -40,7 +40,7 @@ import java.util.*;
             die2.roll();
 
             // Dicesummen er valuen af begge kastede terninger
-            diceSum = die1.getFaceValue + die2.getFaceValue;
+            diceSum = die1.getFaceValue() + die2.getFaceValue();
 
 
             // System udskriver hvad spiller 1 slog med terningerne
