@@ -34,4 +34,32 @@ import java.util.*;
             System.out.println("Player one rolled" + die1.toString() + "and" + die2.toString());
             player1 = player1 + diceSum;
             System.out.println("Player ones total score is" + player1);
+
+            // Nu er spiller 1's tur færdig og derfor kastes der et nyt kast
+            die1.roll();
+            die2.roll();
+
+            // Dicesummen er valuen af begge kastede terninger
+            diceSum = die1.getFaceValue + die2.getFaceValue;
+
+
+            // System udskriver hvad spiller 1 slog med terningerne
+            // Efter så kommer den til at gemme terningernes værdi til spillerens score
+            // Systemet udskriver spillerens totale score
+            System.out.println("Player two rolled" + die1.toString() + "and" + die2.toString());
+            player2 = player2 + diceSum;
+            System.out.println("Player two's total score is" + player2);
+
+            // Hvis spilleren slår over 40, så vinder spiller 1
+            if(player1 > 40){
+                System.out.println("player one won");
+
+            }
+            // Hvis spiller 1 ikke får 40 først, så vinder spiller 2, ved at slå 40.
+            else if(player2 > 40){
+                System.out.println("player two won");
+
+            }
         }
+    }
+}
