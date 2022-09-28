@@ -1,21 +1,21 @@
 public class Die {
-    private final int MAX = 6; //Maximum faceValue on the die
-    private int faceValue; //the faceValue of the die
+    private final int MAX = 6; //Maximum faceValue on the die.
+    private int faceValue; //The faceValue of the die.
 
     //The constructor to initialize the face value.
     public Die() {
         faceValue = 1;
     }
 
-    // Mathod that "rolls" the dice
-    public int roll(){
+    //Method that "rolls" the dice; returns a number (faceValue) between 1 and 6.
+    public int roll() {
         faceValue = (int)(Math.random()*MAX)+1;
 
         return faceValue;
     }
 
     //Method that returns the faceValue of the die.
-    public int getFaceValue(){
+    public int getFaceValue() {
         return faceValue;
     }
 
@@ -24,11 +24,10 @@ public class Die {
         faceValue = value;
     }
 
-    //Method that returns the faceValue of the die as a String. Will be used to show the value.
+    //Method that returns the faceValue of the die as a String. Will be used to show the faceValue of the dice.
     public String toString() {
         String result = Integer.toString(faceValue);
 
-        return result;
+        return result; //returns the result as a String so we can print it.
     }
-
 }
