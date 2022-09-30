@@ -1,4 +1,9 @@
 public class Die {
+
+    //--------------------------------------------------------------------------------------
+    // Understående kode er hentet i Java Software Solutions, Ninth edition, Lewis & Loftus
+    //--------------------------------------------------------------------------------------
+
     private final int MAX = 6; //Maximum faceValue on the die.
     private int faceValue; //The faceValue of the die.
 
