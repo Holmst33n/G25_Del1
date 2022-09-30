@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+
+skinparam packageStyle rectangle
+
+actor Spiller1
+actor Spiller2
+
+rectangle Terningespillet {
+  Spiller1 -- (Spil terningespillet)
+  Spiller2 --> Spiller1
+  (Spil terningespillet) .> (Rul terning) : include
+  (Summere score) <. (Spil terningespillet) : include
+}
+
+@enduml
